@@ -18,9 +18,7 @@ import {
 } from 'lucide-react'
 import type { ConstructionCardData } from '@/types/construction'
 import type { ExerciseTypeInfo } from '@/types/exercise'
-import LoginRequiredModal from '@/components/LoginRequiredModal'
 import { useAuth } from '@/context/AuthContext'
-import { useLoginCheck } from '@/hooks/useLoginCheck'
 
 /* ─────────────────────────── data ─────────────────────────── */
 
@@ -349,7 +347,6 @@ export default function HomePage() {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640
   const router = useRouter()
   const { isAuthenticated } = useAuth()
-  const { showLoginModal, setShowLoginModal, checkLogin, handleLoginRedirect } = useLoginCheck()
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
@@ -362,30 +359,18 @@ export default function HomePage() {
   )
 
   const handleStartPracticingClick = (e: React.MouseEvent) => {
-    const hasAccess = checkLogin(() => {
-      router.push('/practice')
-    })
-    if (!hasAccess) {
-      e.preventDefault()
-    }
+    // 登录限制已禁用 - 允许未登录用户直接访问
+    router.push('/practice')
   }
 
-  const handleExploreConstructionsClick = (e: React.MouseEvent) => {
-    const hasAccess = checkLogin(() => {
-      router.push('/constructions')
-    })
-    if (!hasAccess) {
-      e.preventDefault()
-    }
+  const handleExploreConstructionsClick = () => {
+    // 登录限制已禁用
+    router.push('/constructions')
   }
 
-  const handlePracticeCardClick = (e: React.MouseEvent) => {
-    const hasAccess = checkLogin(() => {
-      router.push('/practice')
-    })
-    if (!hasAccess) {
-      e.preventDefault()
-    }
+  const handlePracticeCardClick = () => {
+    // 登录限制已禁用
+    router.push('/practice')
   }
 
   useEffect(() => {
@@ -918,12 +903,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Login Required Modal */}
-      <LoginRequiredModal
-        isOpen={showLoginModal}
-        onClose={() => setShowLoginModal(false)}
-        onLogin={handleLoginRedirect}
-      />
+
     </div>
   )
 }

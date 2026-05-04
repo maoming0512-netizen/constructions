@@ -6,8 +6,7 @@ import { useRouter } from 'next/navigation'
 import { Leaf, Menu, X, User, Settings, LogOut, ChevronDown, LayoutDashboard } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useAuth } from '@/context/AuthContext'
-import LoginRequiredModal from '@/components/LoginRequiredModal'
-import { useLoginCheck } from '@/hooks/useLoginCheck'
+
 
 const navLinks = [
   { label: 'Library', href: '/constructions', requiresAuth: true },
@@ -22,17 +21,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [userMenuOpen, setUserMenuOpen] = useState(false)
-  const { showLoginModal, setShowLoginModal, checkLogin, handleLoginRedirect } = useLoginCheck()
 
   const handleNavClick = (e: React.MouseEvent, href: string, requiresAuth: boolean) => {
-    if (requiresAuth) {
-      const hasAccess = checkLogin(() => {
-        router.push(href)
-      })
-      if (!hasAccess) {
-        e.preventDefault()
-      }
-    }
+    // 登录限制已禁用 - 允许未登录用户访问所有页面
+    router.push(href)
   }
 
   useEffect(() => {
@@ -95,18 +87,15 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.requiresAuth && !isAuthenticated ? '#' : link.href}
+                href={link.href}
                 onClick={(e) => {
-                  if (link.requiresAuth && !isAuthenticated) {
-                    e.preventDefault()
-                    setShowLoginModal(true)
-                  }
+                  // 登录限制已禁用 - 允许未登录用户访问所有页面
                 }}
                 className="relative text-sm font-medium transition-colors duration-[var(--duration-fast)] group"
                 style={{ color: 'var(--soft-gray)' }}
                 onMouseEnter={(e) => { (e.target as HTMLElement).style.color = 'var(--deep-slate)' }}
                 onMouseLeave={(e) => { (e.target as HTMLElement).style.color = 'var(--soft-gray)' }}
-                prefetch={!link.requiresAuth || isAuthenticated}
+                prefetch={true}
               >
                 {link.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-[1.5px] bg-[--lake-blue] transition-all duration-300 group-hover:w-full" />
@@ -261,16 +250,13 @@ export default function Navbar() {
                   transition={{ delay: i * 0.08, duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
                 >
                   <Link
-                    href={link.requiresAuth && !isAuthenticated ? '#' : link.href}
-                    onClick={(e) => {
+                    href={link.href}
+                    onClick={() => {
                       setMobileOpen(false)
-                      if (link.requiresAuth && !isAuthenticated) {
-                        e.preventDefault()
-                        setShowLoginModal(true)
-                      }
+                      // 登录限制已禁用
                     }}
                     className="text-h3 font-display text-[--deep-slate] hover:text-[--lake-blue] transition-colors block"
-                    prefetch={!link.requiresAuth || isAuthenticated}
+                    prefetch={true}
                   >
                     {link.label}
                   </Link>
@@ -361,12 +347,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* Login Required Modal */}
-      <LoginRequiredModal
-        isOpen={showLoginModal}
-        onClose={() => setShowLoginModal(false)}
-        onLogin={handleLoginRedirect}
-      />
+
     </>
   )
 }

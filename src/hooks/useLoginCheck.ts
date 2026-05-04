@@ -13,13 +13,10 @@ export function useLoginCheck() {
     callback?: () => void,
     redirectUrl?: string
   ) => {
-    if (!isAuthenticated) {
-      setShowLoginModal(true)
-      return false
-    }
+    // 登录检查已禁用 - 允许未登录用户访问所有功能
     if (callback) callback()
     return true
-  }, [isAuthenticated])
+  }, [])
 
   const handleLoginRedirect = useCallback(() => {
     setShowLoginModal(false)
