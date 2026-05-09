@@ -1,0 +1,143 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ================ USER ================
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("user")
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  answers           PracticeRecord[]
+  generatedExercises AIGeneratedExercise[]
+  rssAnalyses        RSSAnalysis[]
+}
+
+// ================ CONSTRUCTION BANK (7682 entries from V11.xlsx) ================
+model Construction {
+  id         String   @id @default(cuid())
+  code       String   @unique
+  name       String
+  template   String
+  coreWords  String
+  function   String
+  usageNote  String
+  example    String
+  variants   String?
+  difficulty String
+  level      String
+  category   String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([level])
+  @@index([category])
+}
+
+// ================ OFFICIAL EXERCISE BANK ================
+model Exercise {
+  id                  String   @id @default(cuid())
+  exerciseId          String   @unique
+  level               String
+  type                String
+  theme               String
+  context             String   @db.Text
+  task                String
+  wordCount           String
+  targetConstructions String
+  referenceAnswer     String   @db.Text
+  isPublished         Boolean  @default(true)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([level])
+  @@index([type])
+}
+
+// ================ AI-GENERATED EXERCISES (per user) ================
+model AIGeneratedExercise {
+  id                  String   @id @default(cuid())
+  exerciseId          String   @unique
+  userId              String
+  level               String
+  type                String
+  theme               String
+  context             String   @db.Text
+  task                String
+  wordCount           String
+  targetConstructions String
+  referenceAnswer     String   @db.Text
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+}
+
+// ================ PRACTICE RECORDS (answers per user) ================
+model PracticeRecord {
+  id            String   @id @default(cuid())
+  userId        String
+  exerciseId    String
+  exerciseType  String
+  exerciseTheme String
+  studentAnswer String   @db.Text
+  wordCount     Int      @default(0)
+  aiFeedback    String?  @db.Text
+  score         Int?
+  duration      Int?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([exerciseId])
+  @@index([createdAt])
+}
+
+// ================ RSS CONSTRUCTION ANALYSIS ================
+model RSSAnalysis {
+  id           String   @id @default(cuid())
+  userId       String
+  feedSource   String
+  articleTitle String
+  articleLink  String
+  analysis     String   @db.Text
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([createdAt])
+}
+
+// ================ ANALYTICS ================
+model VisitLog {
+  id    String   @id @default(cuid())
+  date  String   @unique
+  count Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model APIUsageLog {
+  id    String   @id @default(cuid())
+  date  String   @unique
+  count Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

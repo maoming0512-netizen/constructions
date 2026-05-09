@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* shadcn/ui tokens */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+
+    /* ConstructScape Design Tokens */
+    --lake-blue: #6BA3BE;
+    --lake-green: #8AB89A;
+    --lavender: #B8A9C9;
+    --mist-white: #F5F7FA;
+    --soft-gray: #8899AA;
+    --deep-slate: #2D3748;
+    --warm-white: #FAFBFC;
+
+    /* Glassmorphism Tokens */
+    --glass-bg: rgba(255, 255, 255, 0.10);
+    --glass-bg-hover: rgba(255, 255, 255, 0.15);
+    --glass-bg-active: rgba(255, 255, 255, 0.20);
+    --glass-border: rgba(255, 255, 255, 0.20);
+    --glass-border-hover: rgba(255, 255, 255, 0.35);
+    --glass-blur: blur(12px);
+    --glass-blur-heavy: blur(24px);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+    /* Semantic Colors */
+    --success: #6BCB77;
+    --success-bg: rgba(107, 203, 119, 0.15);
+    --warning: #F4A261;
+    --warning-bg: rgba(244, 162, 97, 0.15);
+    --error: #E76F51;
+    --error-bg: rgba(231, 111, 81, 0.15);
+    --info: #6BA3BE;
+
+    /* Gradient Presets */
+    --gradient-hero: linear-gradient(135deg, rgba(107, 163, 190, 0.25) 0%, rgba(184, 169, 201, 0.20) 50%, rgba(138, 184, 154, 0.15) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+    --gradient-section: linear-gradient(180deg, #F5F7FA 0%, #EEF2F5 100%);
+    --gradient-sunset: linear-gradient(135deg, rgba(244, 162, 97, 0.15) 0%, rgba(184, 169, 201, 0.20) 100%);
+    --gradient-practice: radial-gradient(circle at 50% 0%, rgba(107, 163, 190, 0.10) 0%, transparent 60%);
+
+    /* Animation Easings */
+    --ease-gentle: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-dramatic: cubic-bezier(0.87, 0, 0.13, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Duration Tokens */
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --duration-dramatic: 800ms;
+
+    /* Spacing Tokens */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* Layout Tokens */
+    --container-max: 1280px;
+    --container-narrow: 800px;
+    --container-wide: 1440px;
+
+    /* Border Radius */
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 0.75rem;
+    --border-radius-lg: 1rem;
+    --border-radius-xl: 1.5rem;
+    --border-radius-full: 9999px;
+
+    /* Z-Index Scale */
+    --z-background: -1;
+    --z-content: 1;
+    --z-elevated: 10;
+    --z-nav: 50;
+    --z-modal-overlay: 100;
+    --z-modal-content: 110;
+    --z-toast: 200;
+    --z-loading: 300;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--mist-white);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--deep-slate);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .font-accent {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .glass-card {
+    backdrop-filter: var(--glass-blur);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-card-hover:hover {
+    backdrop-filter: var(--glass-blur);
+    background: var(--glass-bg-hover);
+    border-color: var(--glass-border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  }
+
+  .text-hero {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  .text-h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .text-h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .text-h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .text-h4 {
+    font-size: 1.25rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.005em;
+  }
+
+  .text-body-lg {
+    font-size: 1.125rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: 0.005em;
+  }
+
+  .text-body {
+    font-size: 1rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  .text-body-sm {
+    font-size: 0.875rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+  }
+
+  .text-caption {
+    font-size: 0.75rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+
+  .text-example {
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.005em;
+  }
+
+  .text-example-lg {
+    font-size: 1.35rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-section {
+    background: var(--gradient-section);
+  }
+
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+
+  .gradient-practice {
+    background: var(--gradient-practice);
+  }
+}
+
+/* Floating particles animation */
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up-sway {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px);
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(5deg);
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mist-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--deep-slate);
+}
+
+/* View Transitions for smooth page navigation */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 120ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 200ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
