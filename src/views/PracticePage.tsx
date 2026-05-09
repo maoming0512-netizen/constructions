@@ -17,6 +17,9 @@ import {
   Shuffle,
   Save,
   Clock,
+  ChevronDown,
+  ChevronUp,
+  Brain,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import ReactMarkdown from 'react-markdown'
@@ -46,6 +49,8 @@ function PracticePage() {
   const [studentAnswer, setStudentAnswer] = useState('')
   const [showReference, setShowReference] = useState(false)
   const [aiAnalysis, setAiAnalysis] = useState<string | null>(null)
+  const [reasoningContent, setReasoningContent] = useState<string | null>(null)
+  const [reasoningOpen, setReasoningOpen] = useState(true)
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saved' | 'saving'>('idle')
   const [apiError, setApiError] = useState(false)
@@ -95,6 +100,7 @@ function PracticePage() {
     setStudentAnswer('')
     setShowReference(false)
     setAiAnalysis(null)
+    setReasoningContent(null)
   }, [filterLevel, filterType])
 
   // Auto-load more when approaching end
@@ -115,6 +121,7 @@ function PracticePage() {
       setStudentAnswer('')
       setShowReference(false)
       setAiAnalysis(null)
+      setReasoningContent(null)
       startTimeRef.current = Date.now()
     }
   }, [hasNext])
@@ -126,6 +133,7 @@ function PracticePage() {
       setStudentAnswer('')
       setShowReference(false)
       setAiAnalysis(null)
+      setReasoningContent(null)
       startTimeRef.current = Date.now()
     }
   }, [hasPrev])
@@ -139,6 +147,7 @@ function PracticePage() {
     setStudentAnswer('')
     setShowReference(false)
     setAiAnalysis(null)
+    setReasoningContent(null)
     startTimeRef.current = Date.now()
   }, [filteredExercises.length, currentIndex])
 
@@ -190,6 +199,8 @@ function PracticePage() {
     if (!studentAnswer.trim() || !currentExercise) return
     setIsAnalyzing(true)
     setAiAnalysis(null)
+    setReasoningContent(null)
+    setReasoningOpen(true)
 
     try {
       const skillConfig = getSkillConfig('analyzeAnswer')
@@ -200,6 +211,7 @@ function PracticePage() {
       }
 
       let fullContent = ''
+      let fullReasoning = ''
       const skillInput = {
         exerciseType: currentExercise.type,
         exerciseContext: currentExercise.context,
@@ -210,7 +222,14 @@ function PracticePage() {
       }
 
       for await (const chunk of callOpenAIStream(skillConfig, skillInput, apiConfig)) {
+        if (chunk.type === 'reasoning' && chunk.text) {
+          fullReasoning += chunk.text
+          setReasoningContent(fullReasoning)
+        }
         if (chunk.type === 'content' && chunk.text) {
+          if (fullReasoning && reasoningOpen) {
+            setReasoningOpen(false)
+          }
           fullContent += chunk.text
           setAiAnalysis(fullContent)
         }
@@ -463,6 +482,27 @@ function PracticePage() {
 
       {/* ═══════════ AI Analysis (full width below) ═══════════ */}
       <AnimatePresence>
+        {/* Reasoning Panel */}
+        {reasoningContent && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
+            className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50/40 dark:bg-amber-950/20 overflow-hidden">
+            <button
+              onClick={() => setReasoningOpen(!reasoningOpen)}
+              className="w-full flex items-center justify-between px-5 py-3 text-sm font-medium text-amber-700 dark:text-amber-300 hover:bg-amber-100/50 dark:hover:bg-amber-900/20 transition-colors"
+            >
+              <span className="flex items-center gap-2">
+                <Brain className="w-4 h-4" />
+                {isAnalyzing ? '💭 Thinking...' : '💭 AI Thinking Process'}
+              </span>
+              {reasoningOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </button>
+            {reasoningOpen && (
+              <div className="px-5 pb-4">
+                <pre className="whitespace-pre-wrap text-xs text-amber-800/80 dark:text-amber-300/70 font-mono leading-relaxed max-h-48 overflow-y-auto">{reasoningContent}</pre>
+              </div>
+            )}
+          </motion.div>
+        )}
         {aiAnalysis && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             className="p-6 rounded-xl border border-violet-200 dark:border-violet-900 bg-white dark:bg-slate-900">
