@@ -106,11 +106,15 @@ export default function RSSReaderPage() {
       }
 
       try {
-        const parsed = JSON.parse(fullContent)
+        let toParse = fullContent.trim()
+        // Try extracting JSON from markdown code block
+        const mdMatch = toParse.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
+        if (mdMatch) toParse = mdMatch[1].trim()
+        const parsed = JSON.parse(toParse)
         setAnalysisJson(parsed)
         setAnalysisResult(null)
       } catch {
-        // Keep raw text, but it's in analysisResult already
+        // Keep raw text as analysisResult — will render as markdown
       }
     } catch (err: any) {
       setAnalysisResult(`## Error\n\n${err.message || 'Failed to analyze'}`)
