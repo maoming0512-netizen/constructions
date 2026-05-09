@@ -1,80 +1,197 @@
-# 部署到 Cloudflare Pages (Webify) 指南
+# 部署指南 — 腾讯云轻量应用服务器
 
-## 前置条件
+## 方式一：直接部署（推荐，最简单）
 
-1. Cloudflare 账号
-2. Neon 数据库账号和连接字符串
-3. GitHub/GitLab 仓库（用于 CI/CD）
+服务器上需要 Node.js 22+ 和 PM2。
 
-## 步骤
-
-### 1. 安装依赖
+### 1. 登录服务器
 
 ```bash
-npm install @neondatabase/serverless @prisma/adapter-neon
+ssh root@你的服务器IP
 ```
 
-### 2. 更新 Prisma Client
+### 2. 安装 Node.js 22（如未安装）
 
 ```bash
+curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+apt-get install -y nodejs git
+node -v   # 确认 >= 22
+```
+
+### 3. 安装 PM2（进程守护）
+
+```bash
+npm install -g pm2
+```
+
+### 4. 克隆项目 & 安装依赖
+
+```bash
+cd /opt
+git clone https://github.com/maoming0512-netizen/constructions.git
+cd constructions
+npm install
+```
+
+### 5. 配置环境变量
+
+```bash
+cp .env.example .env
+nano .env
+```
+
+填写以下内容：
+
+```env
+# 数据库（必须 — 指向你的 PostgreSQL）
+DATABASE_URL="postgresql://postgres:你的密码@localhost:5432/constructscape"
+
+# NextAuth
+NEXTAUTH_URL="http://你的服务器IP:3000"       # 如果绑定了域名就写 https://你的域名
+NEXTAUTH_SECRET="随便一长串乱码，用 openssl rand -base64 32 生成"
+
+# AI（可选，用户可以在页面 Settings 里自己填）
+# AI_API_KEY="sk-xxx"
+# AI_BASE_URL="https://api.deepseek.com"
+# AI_MODEL="deepseek-v4-pro"
+```
+
+### 6. 初始化数据库
+
+```bash
+npx prisma migrate deploy
 npx prisma generate
 ```
 
-### 3. 创建 Cloudflare Pages 项目
+### 7. 构建 & 启动
 
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com)
-2. 进入 **Pages** 页面
-3. 点击 **Create a project**
-4. 连接你的 Git 仓库
-5. 设置构建配置：
-
-**Build Settings:**
-- Build command: `npm run build`
-- Build output directory: `.next`
-
-### 4. 配置环境变量
-
-在 Cloudflare Pages 项目设置的 **Environment variables** 中添加：
-
-```
-DATABASE_URL=postgresql://username:password@hostname.neon.tech/database?sslmode=require
-NEXTAUTH_URL=https://your-project.pages.dev
-NEXTAUTH_SECRET=your-secret-key-here
-NODE_ENV=production
+```bash
+npm run build
+pm2 start ecosystem.config.js
+pm2 save
+pm2 startup   # 设置开机自启，按提示执行输出的命令
 ```
 
-### 5. 创建 wrangler.toml (可选)
+### 8. 开放端口
 
-如果需要更高级的配置，在项目根目录创建 `wrangler.toml`：
+腾讯云轻量服务器控制台 → 防火墙 → 添加规则：
+- 协议：TCP
+- 端口：3000
+- 策略：允许
 
-```toml
-name = "your-project-name"
-compatibility_date = "2024-01-01"
+### 9. 更新代码（后续每次更新）
 
-[env.production]
-name = "your-project-name"
+```bash
+cd /opt/constructions
+git pull origin master
+npm install            # 如有新依赖
+npx prisma generate    # 如有 schema 变更
+npm run build
+pm2 restart constructions
 ```
 
-### 6. 部署
+---
 
-Cloudflare Pages 会自动在每次推送到 main 分支时重新部署。
+## 方式二：Docker 部署
 
-## 注意事项
+### 1. 安装 Docker
 
-1. **NextAuth**: 确保设置了 `NEXTAUTH_SECRET` 和 `NEXTAUTH_URL`
-2. **数据库**: Neon 数据库连接字符串需要包含 `sslmode=require`
-3. **图片**: 已配置 `unoptimized: true` 以支持静态导出
+```bash
+curl -fsSL https://get.docker.com | bash
+```
 
-## 故障排除
+### 2. 克隆项目
 
-### 数据库连接失败
-- 检查 DATABASE_URL 是否正确
-- 确保 Neon 数据库允许所有 IP 访问（或使用无 IP 限制）
+```bash
+cd /opt
+git clone https://github.com/maoming0512-netizen/constructions.git
+cd constructions
+```
 
-### 构建失败
-- 检查 `npx prisma generate` 是否在构建前运行
-- 确保所有依赖已安装
+### 3. 创建 .env
 
-### 环境变量问题
-- Cloudflare Pages 的环境变量在构建时和运行时都可用
-- 重新部署后环境变量才会生效
+```bash
+cp .env.example .env
+nano .env   # 同上方式一填写环境变量
+```
+
+### 4. 构建镜像 & 运行
+
+```bash
+docker build -t constructions .
+docker run -d --name constructions \
+  --restart always \
+  -p 3000:3000 \
+  --env-file .env \
+  constructions
+```
+
+### 5. 更新
+
+```bash
+cd /opt/constructions
+git pull origin master
+docker build -t constructions .
+docker stop constructions && docker rm constructions
+docker run -d --name constructions --restart always -p 3000:3000 --env-file .env constructions
+```
+
+---
+
+## PostgreSQL 数据库
+
+如果你服务器上还没有 PostgreSQL：
+
+```bash
+apt-get install -y postgresql postgresql-contrib
+sudo -u postgres psql -c "ALTER USER postgres PASSWORD '你的密码';"
+sudo -u postgres createdb constructscape
+```
+
+然后编辑 `pg_hba.conf` 允许密码登录：
+
+```bash
+nano /etc/postgresql/版本/main/pg_hba.conf
+# 找到 local all all peer 改为 local all all md5
+systemctl restart postgresql
+```
+
+---
+
+## 绑定域名（可选）
+
+如果你有域名，到腾讯云 DNS 解析添加 A 记录指向服务器 IP。
+然后安装 Nginx 反向代理：
+
+```bash
+apt-get install -y nginx
+```
+
+创建 `/etc/nginx/sites-available/constructions`：
+
+```nginx
+server {
+    listen 80;
+    server_name 你的域名.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+启用并重启：
+
+```bash
+ln -s /etc/nginx/sites-available/constructions /etc/nginx/sites-enabled/
+nginx -t && systemctl restart nginx
+```
+
+然后修改 `.env` 中的 `NEXTAUTH_URL` 为 `https://你的域名`，重新 `pm2 restart constructions`。
