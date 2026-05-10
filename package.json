@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build && node scripts/copy-standalone-assets.cjs",
     "start": "next start",
-    "deploy": "npm run build && pm2 restart constructions || true",
+    "deploy": "npm install && npm run build && pm2 restart constructions || true",
     "lint": "next lint",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
