@@ -1,0 +1,1946 @@
+{
+  "createdAt": "2026-05-10T11:47:41.838Z",
+  "affectedCount": 48,
+  "affected": [
+    {
+      "id": "cmoy73rgf01twtpzo8dfwtqp2",
+      "code": "EXP-B-003",
+      "name": "build a house",
+      "template": "build + 宾语",
+      "coreWords": "build",
+      "function": "建造具体事物",
+      "usageNote": "基础动宾搭配，build后接建造的物体",
+      "example": "They plan to build a house near the lake.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.514Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "discuss_future"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgg01vrtpzozr83fiuy",
+      "code": "EXP-B-096",
+      "name": "complete the task",
+      "template": "complete + 名词",
+      "coreWords": "complete",
+      "function": "完成任务",
+      "usageNote": "动宾搭配，complete强调圆满",
+      "example": "She completed the task on time.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [
+          "physical_interaction"
+        ],
+        "action_density": 3,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [
+          "polite_exchange"
+        ],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [
+          "action_sequence"
+        ],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.517Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "invitation_or_offer"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation",
+          "micro_continuation",
+          "action_chain_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rit0289tpzo1fb4iy96",
+      "code": "EXP-C-028",
+      "name": "enter the room",
+      "template": "enter + 地点",
+      "coreWords": "enter",
+      "function": "进入某地",
+      "usageNote": "enter为及物动词，不需加into",
+      "example": "Please enter the room through the front door.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.767Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rns03astpzoo907s4t9",
+      "code": "EXP-E-481",
+      "name": "suitcase",
+      "template": "suitcase",
+      "coreWords": "suit",
+      "function": "手提箱",
+      "usageNote": "复合名词",
+      "example": "I packed my suitcase.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.612Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73ruf04idtpzofe737p7m",
+      "code": "EXP-D-014",
+      "name": "lack confidence",
+      "template": "lack + 抽象名词",
+      "coreWords": "lack",
+      "function": "缺乏（信心/勇气等）",
+      "usageNote": "lack 作动词时直接接宾语",
+      "example": "She lacks confidence when speaking in public.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.515Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rvr04octpzoxj93o07o",
+      "code": "EXP-D-643",
+      "name": "pocket-sized",
+      "template": "pocket-sized",
+      "coreWords": "pocket",
+      "function": "袖珍的",
+      "usageNote": "复合形容词",
+      "example": "This is a pocket-sized dictionary.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.647Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rmf02tptpzojjdmq7o3",
+      "code": "EXP-D-299",
+      "name": "nor do I",
+      "template": "nor + 助动词 + 主语",
+      "coreWords": "nor",
+      "function": "我也不",
+      "usageNote": "倒装结构",
+      "example": "'I can't swim.' 'Nor can I.'",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.865Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rns03awtpzopwssgixt",
+      "code": "EXP-E-485",
+      "name": "sunrise",
+      "template": "sunrise",
+      "coreWords": "sun",
+      "function": "日出",
+      "usageNote": "复合名词",
+      "example": "We watched the sunrise.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:42.836Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rns03axtpzoig9ol9fk",
+      "code": "EXP-E-486",
+      "name": "sunshine",
+      "template": "sunshine",
+      "coreWords": "sun",
+      "function": "阳光",
+      "usageNote": "复合名词",
+      "example": "I love the sunshine.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:42.836Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgf01rxtpzo7sw2bj5y",
+      "code": "EXP-A-416",
+      "name": "already",
+      "template": "已经（用于疑问表惊讶）",
+      "coreWords": "already",
+      "function": "已经（用于疑问句表惊讶）",
+      "usageNote": "already置于疑问句末",
+      "example": "Is it ten o'clock already?",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpA_a词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpA_a词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.411Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgg01vbtpzolm5re3db",
+      "code": "EXP-B-072",
+      "name": "collect stamps",
+      "template": "collect + 名词",
+      "coreWords": "collect",
+      "function": "收集；采集",
+      "usageNote": "动宾搭配，collect接收集物",
+      "example": "He likes to collect stamps.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.517Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "express_preference"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgg01witpzod7wo1d8v",
+      "code": "EXP-B-137",
+      "name": "create jobs",
+      "template": "create + 名词",
+      "coreWords": "create",
+      "function": "创造",
+      "usageNote": "动宾搭配",
+      "example": "Technology creates new jobs.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.518Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgh01xctpzo4ga6u1r5",
+      "code": "EXP-B-181",
+      "name": "destroy completely",
+      "template": "destroy + 副词",
+      "coreWords": "destroy",
+      "function": "彻底摧毁",
+      "usageNote": "动状搭配",
+      "example": "The storm destroyed the village completely.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [
+          "physical_interaction"
+        ],
+        "action_density": 3,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [
+          "action_sequence"
+        ],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.519Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [],
+        "recommended_exercise_types": [
+          "action_chain_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rig01yytpzo1iyblx6z",
+      "code": "EXP-B-257",
+      "name": "easy-going",
+      "template": "easy-going",
+      "coreWords": "easy",
+      "function": "随和的",
+      "usageNote": "复合形容词",
+      "example": "He is an easy-going person.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.632Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rij0205tpzo5drjwojw",
+      "code": "EXP-B-333",
+      "name": "exercise regularly",
+      "template": "exercise + 副词",
+      "coreWords": "exercise",
+      "function": "定期锻炼",
+      "usageNote": "动状搭配",
+      "example": "It's important to exercise regularly.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [
+          "cultural_explanation"
+        ],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.634Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "explanation"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation",
+          "long_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rin022wtpzoa0mnngii",
+      "code": "EXP-B-508",
+      "name": "boring class",
+      "template": "boring + 名词",
+      "coreWords": "boring",
+      "function": "无聊的课",
+      "usageNote": "形容词+名词",
+      "example": "This is a really boring class.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.637Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rio023vtpzo8j1ti2xb",
+      "code": "EXP-B-565",
+      "name": "calculate the cost",
+      "template": "calculate + 名词",
+      "coreWords": "calculate",
+      "function": "计算成本",
+      "usageNote": "动宾搭配",
+      "example": "We need to calculate the total cost.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.762Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rip024vtpzokpwyv56n",
+      "code": "EXP-B-623",
+      "name": "cheers",
+      "template": "cheers",
+      "coreWords": "cheers",
+      "function": "干杯；谢谢；再见",
+      "usageNote": "口语用语",
+      "example": "Cheers! Here's to your success.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.763Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rit0285tpzo3hb1jhoh",
+      "code": "EXP-C-024",
+      "name": "enough + n.",
+      "template": "enough + 名词",
+      "coreWords": "enough",
+      "function": "足够的…",
+      "usageNote": "enough作形容词，置于名词前",
+      "example": "We have enough time to finish the work.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.767Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73riu028jtpzop13n21z5",
+      "code": "EXP-C-047",
+      "name": "even better/worse",
+      "template": "even + 比较级",
+      "coreWords": "even",
+      "function": "甚至更好/更糟",
+      "usageNote": "even加强比较级语气",
+      "example": "This book is even better than that one.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.768Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "compare"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "comparison"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation",
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73riu028rtpzoekdavt4a",
+      "code": "EXP-C-058",
+      "name": "everything is ready",
+      "template": "everything + 单数动词",
+      "coreWords": "everything",
+      "function": "一切/所有事物",
+      "usageNote": "作主语时动词用单数",
+      "example": "Everything is going well.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.768Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73riu028stpzogjj1tabu",
+      "code": "EXP-C-059",
+      "name": "everywhere you go",
+      "template": "everywhere + 从句",
+      "coreWords": "everywhere",
+      "function": "无论你去哪里",
+      "usageNote": "everywhere可引导状语从句",
+      "example": "Everywhere you go, you can see new buildings.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.768Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73riv029utpzoziqkbdfn",
+      "code": "EXP-C-114",
+      "name": "fail an exam",
+      "template": "fail + 考试/科目",
+      "coreWords": "fail",
+      "function": "考试不及格",
+      "usageNote": "nan",
+      "example": "If you fail the test, you can take it again.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [
+          "physical_interaction"
+        ],
+        "action_density": 3,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [
+          "action_sequence"
+        ],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.873Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "describe_action"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [],
+        "recommended_exercise_types": [
+          "action_chain_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73riw02amtpzo2hb4ut5v",
+      "code": "EXP-C-153",
+      "name": "few",
+      "template": "few + 复数名词",
+      "coreWords": "few",
+      "function": "几乎没有",
+      "usageNote": "表否定意义",
+      "example": "Few people know the truth.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.874Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rks02f1tpzoy9iiwjl1",
+      "code": "EXP-C-361",
+      "name": "go shopping/swimming",
+      "template": "go + 动名词",
+      "coreWords": "go",
+      "function": "去做某事",
+      "usageNote": "常用于娱乐活动",
+      "example": "Let's go shopping this afternoon.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [
+          "physical_interaction"
+        ],
+        "action_density": 3,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [
+          "action_sequence"
+        ],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.878Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [],
+        "recommended_exercise_types": [
+          "action_chain_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rks02fftpzoj9agk14g",
+      "code": "EXP-C-382",
+      "name": "good-looking",
+      "template": "good-looking",
+      "coreWords": "good",
+      "function": "好看的/漂亮的",
+      "usageNote": "复合形容词",
+      "example": "He is a good-looking young man.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.976Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rkt02h5tpzo1ltykcks",
+      "code": "EXP-C-469",
+      "name": "have breakfast/lunch/dinner",
+      "template": "have + 三餐",
+      "coreWords": "have",
+      "function": "吃早餐/午餐/晚餐",
+      "usageNote": "nan",
+      "example": "I have breakfast at 7 a.m.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:44.978Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rkw02n1tpzoinp2lcle",
+      "code": "EXP-C-737",
+      "name": "join the army/club",
+      "template": "join + 组织/团体",
+      "coreWords": "join",
+      "function": "参军/加入俱乐部",
+      "usageNote": "join后直接接组织名称",
+      "example": "He joined the army last year.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.100Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "invite"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rkx02odtpzo060461qp",
+      "code": "EXP-C-801",
+      "name": "kind-hearted",
+      "template": "kind-hearted",
+      "coreWords": "kind",
+      "function": "好心的/善良的",
+      "usageNote": "复合形容词",
+      "example": "My grandmother is a kind-hearted woman.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.101Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rmc02qrtpzob7nxl4bw",
+      "code": "EXP-D-140",
+      "name": "man-made",
+      "template": "man-made + 名词",
+      "coreWords": "man-made",
+      "function": "人造的；人工的",
+      "usageNote": "复合形容词",
+      "example": "The lake is man-made, not natural.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.259Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rmd02rltpzo5204ly2f",
+      "code": "EXP-D-191",
+      "name": "middle-aged",
+      "template": "middle-aged + 名词",
+      "coreWords": "middle",
+      "function": "中年的",
+      "usageNote": "复合形容词，需连字符",
+      "example": "The novel is about a middle-aged couple.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.260Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rme02sltpzo1z5ivywr",
+      "code": "EXP-D-245",
+      "name": "mustn't do",
+      "template": "mustn't + 动词原形",
+      "coreWords": "must",
+      "function": "禁止做某事",
+      "usageNote": "mustn't 表禁止，而非推测",
+      "example": "You mustn't tell anyone about this.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.261Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rme02t3tpzoff3bp1l8",
+      "code": "EXP-D-275",
+      "name": "neither do I",
+      "template": "neither + 助动词 + 主语",
+      "coreWords": "neither",
+      "function": "我也不",
+      "usageNote": "倒装结构，表示前面否定情况也适用于后者",
+      "example": "'I don't like coffee.' 'Neither do I.'",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 2,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.262Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "express_preference"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rmg02wftpzovvc77ujs",
+      "code": "EXP-D-452",
+      "name": "overcoat",
+      "template": "overcoat",
+      "coreWords": "overcoat",
+      "function": "大衣；外套",
+      "usageNote": "复合名词",
+      "example": "He put on his overcoat before going out.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [
+          "physical_interaction"
+        ],
+        "action_density": 3,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [
+          "action_sequence"
+        ],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.370Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "describe_action"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [],
+        "recommended_exercise_types": [
+          "action_chain_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rmh02x7tpzofeqp58lt",
+      "code": "EXP-D-494",
+      "name": "paperwork",
+      "template": "paperwork",
+      "coreWords": "paperwork",
+      "function": "文书工作",
+      "usageNote": "不可数名词",
+      "example": "I spent the morning doing paperwork.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.371Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rnq0381tpzofqudit32",
+      "code": "EXP-E-355",
+      "name": "smoke-free",
+      "template": "smoke-free",
+      "coreWords": "smoke",
+      "function": "无烟的",
+      "usageNote": "复合形容词",
+      "example": "This hotel is smoke-free.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.497Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rnq038etpzoi60az6g0",
+      "code": "EXP-E-373",
+      "name": "somehow",
+      "template": "somehow",
+      "coreWords": "some",
+      "function": "以某种方式/不知怎么地",
+      "usageNote": "副词",
+      "example": "Somehow we managed to finish on time.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:45.497Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rt1041mtpzolmo1rhm2",
+      "code": "EXP-A-324",
+      "name": "absent-minded",
+      "template": "absent-minded",
+      "coreWords": "absent",
+      "function": "心不在焉的",
+      "usageNote": "复合形容词",
+      "example": "The absent-minded professor forgot his keys again.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpA_a词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpA_a词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.113Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rt20436tpzobki9wv0w",
+      "code": "EXP-A-419",
+      "name": "altogether",
+      "template": "altogether",
+      "coreWords": "altogether",
+      "function": "总共；完全地",
+      "usageNote": "副词，多义",
+      "example": "Altogether, there were twelve students.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpA_a词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpA_a词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.233Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rt30445tpzo70bryqz8",
+      "code": "EXP-A-505",
+      "name": "self-aware",
+      "template": "self-aware",
+      "coreWords": "aware",
+      "function": "有自知之明的",
+      "usageNote": "复合形容词",
+      "example": "A good leader should be self-aware.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpA_a词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpA_a词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.234Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rt50476tpzoesu4j9dz",
+      "code": "EXP-B-307",
+      "name": "evaluate the performance",
+      "template": "evaluate + 名词",
+      "coreWords": "evaluate",
+      "function": "评估表现",
+      "usageNote": "动宾搭配",
+      "example": "Teachers evaluate students' performance.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.237Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rt5047xtpzo5sp0ni8w",
+      "code": "EXP-B-358",
+      "name": "extraordinary ability",
+      "template": "extraordinary + 名词",
+      "coreWords": "extraordinary",
+      "function": "非凡的能力",
+      "usageNote": "形容词+名词搭配",
+      "example": "He has an extraordinary ability to learn languages.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.238Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73ruc04b6tpzoy3qoj2ly",
+      "code": "EXP-B-657",
+      "name": "clean-cut",
+      "template": "clean-cut",
+      "coreWords": "clean",
+      "function": "轮廓分明的；整洁的",
+      "usageNote": "复合形容词",
+      "example": "He has a clean-cut appearance.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.357Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rud04egtpzom6v7phy1",
+      "code": "EXP-C-262",
+      "name": "user-friendly",
+      "template": "user-friendly",
+      "coreWords": "friendly",
+      "function": "用户友好的/易用的",
+      "usageNote": "复合形容词",
+      "example": "This software is very user-friendly.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpC_e-k词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpC_e-k词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.512Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rui04m1tpzoj6ueyhgb",
+      "code": "EXP-D-357",
+      "name": "offshore wind",
+      "template": "offshore + 名词",
+      "coreWords": "offshore",
+      "function": "离岸的；近海的",
+      "usageNote": "nan",
+      "example": "They are building offshore wind farms.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpD_k-p词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpD_k-p词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.645Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rvs04patpzo4u6peu2a",
+      "code": "EXP-E-094",
+      "name": "first-rate",
+      "template": "ADJ-rate",
+      "coreWords": "rate",
+      "function": "一流的",
+      "usageNote": "复合形容词",
+      "example": "This is a first-rate hotel.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.648Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "connect_ideas"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rvt04qktpzo0gohftuk",
+      "code": "EXP-E-335",
+      "name": "simple-minded",
+      "template": "simple-minded",
+      "coreWords": "simple",
+      "function": "头脑简单的",
+      "usageNote": "复合形容词",
+      "example": "Don't be so simple-minded.",
+      "difficulty": "高中",
+      "level": "senior",
+      "category": "ExpE_p-s词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpE_p-s词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.759Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "construction_guided_continuation"
+        ]
+      }
+    },
+    {
+      "id": "cmoy73rgg01w8tpzosrxkiikr",
+      "code": "EXP-B-123",
+      "name": "cook dinner",
+      "template": "cook + 餐名",
+      "coreWords": "cook",
+      "function": "做饭",
+      "usageNote": "动宾搭配",
+      "example": "My mother cooks dinner every day.",
+      "difficulty": "初中",
+      "level": "junior",
+      "category": "ExpB_b-e词扩充",
+      "metadata": {
+        "scene_type": [],
+        "action_density": 1,
+        "cultural_usage": [],
+        "teaching_value": "low",
+        "cleanup_version": "expression-value-2026-05",
+        "source_category": "ExpB_b-e词扩充",
+        "exclusion_reason": "vocabulary_only",
+        "interaction_type": [],
+        "metadata_version": "2026.05.teaching-kb.v1",
+        "construction_type": "vocabulary_only",
+        "use_in_generation": false,
+        "emotional_function": [],
+        "narrative_function": [],
+        "cleanup_reviewed_at": "2026-05-10T09:03:46.864Z",
+        "emotional_intensity": 1,
+        "expression_function": [
+          "general_expression"
+        ],
+        "student_growth_value": "low",
+        "communicative_function": [
+          "general_expression"
+        ],
+        "recommended_exercise_types": [
+          "single_sentence_translation"
+        ]
+      }
+    }
+  ]
+}

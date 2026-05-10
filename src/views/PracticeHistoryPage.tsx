@@ -32,7 +32,7 @@ interface RSSAnalysisRecord {
 type Tab = 'practice' | 'rss'
 
 const SOURCE_NAMES: Record<string, string> = { 'b-markets': 'B-Markets', 'r-world': 'R-World China' }
-const typeLabels: Record<string, string> = { D1: 'Micro Continuation', D2: 'Long Continuation', T1: 'C-E Translation' }
+const typeLabels: Record<string, string> = { D1: 'Micro Continuation', D2: 'Long Continuation', T1: 'C-E Translation', GAP: 'Gap Continuation', CG: 'Construction-guided', 'construction-loop': 'Construction Loop' }
 
 export default function PracticeHistoryPage() {
   const { isAuthenticated, user } = useAuth()
@@ -75,8 +75,21 @@ export default function PracticeHistoryPage() {
     if (activeTab !== 'rss') return
     setRssLoading(true)
     if (!isAuthenticated) {
-      const saved = localStorage.getItem('cs_rss_analyses')
-      if (saved) setRssRecords(JSON.parse(saved))
+      const saved = localStorage.getItem('cs_construction_articles')
+      if (saved) {
+        setRssRecords(JSON.parse(saved).map((article: any) => ({
+          id: article.id,
+          feedSource: 'construction-studio',
+          articleTitle: article.title,
+          articleLink: '',
+          analysis: JSON.stringify({
+            summary: article.article,
+            constructions: article.highlighted_constructions || [],
+            writingTakeaway: article.teaching_notes?.[0] || '',
+          }),
+          createdAt: article.createdAt,
+        })))
+      }
       setRssLoading(false)
       return
     }
@@ -100,11 +113,11 @@ export default function PracticeHistoryPage() {
   }
 
   const deleteLocalRss = (id: string) => {
-    const saved = localStorage.getItem('cs_rss_analyses')
+    const saved = localStorage.getItem('cs_construction_articles')
     if (!saved) return
     const r = JSON.parse(saved)
     const filtered = r.filter((x: any) => x.id !== id)
-    localStorage.setItem('cs_rss_analyses', JSON.stringify(filtered))
+    localStorage.setItem('cs_construction_articles', JSON.stringify(filtered))
     setRssRecords(filtered)
   }
 
@@ -135,7 +148,7 @@ export default function PracticeHistoryPage() {
             <ArrowRight className="w-4 h-4" /> Practice
           </Link>
           <Link href="/constructions" className="flex items-center gap-1.5 px-4 py-2 rounded-lg border text-sm font-medium hover:bg-accent transition-colors">
-            <Rss className="w-4 h-4" /> Reader
+            <Sparkles className="w-4 h-4" /> Studio
           </Link>
         </div>
       </div>
@@ -150,7 +163,7 @@ export default function PracticeHistoryPage() {
         <button onClick={() => setActiveTab('rss')}
           className={cn('flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all',
             activeTab === 'rss' ? 'bg-white dark:bg-slate-800 shadow-sm' : 'text-muted-foreground hover:text-foreground')}>
-          <Sparkles className="w-4 h-4" /> RSS Analyses
+          <Sparkles className="w-4 h-4" /> Studio Articles
         </button>
       </div>
 
@@ -231,7 +244,7 @@ export default function PracticeHistoryPage() {
         </>
       )}
 
-      {/* ───── RSS Analysis Tab Content ───── */}
+      {/* Studio Article Tab Content */}
       {activeTab === 'rss' && (
         <>
           {rssLoading ? (
@@ -239,9 +252,9 @@ export default function PracticeHistoryPage() {
           ) : rssRecords.length === 0 ? (
             <div className="text-center py-20 text-muted-foreground">
               <Sparkles className="w-12 h-12 mx-auto mb-4 opacity-30" />
-              <p className="text-lg font-medium">No RSS analyses yet</p>
-              <p className="text-sm mt-1">Use Find Constructions in the Reader and save your results.</p>
-              <Link href="/constructions" className="inline-flex items-center gap-1.5 mt-4 px-4 py-2 rounded-lg bg-[--lake-blue] text-white text-sm font-medium">Open Reader <ArrowRight className="w-3.5 h-3.5" /></Link>
+              <p className="text-lg font-medium">No studio articles yet</p>
+              <p className="text-sm mt-1">Generate a construction-guided reading in the Studio.</p>
+              <Link href="/constructions" className="inline-flex items-center gap-1.5 mt-4 px-4 py-2 rounded-lg bg-[--lake-blue] text-white text-sm font-medium">Open Studio <ArrowRight className="w-3.5 h-3.5" /></Link>
             </div>
           ) : (
             <div className="space-y-3">

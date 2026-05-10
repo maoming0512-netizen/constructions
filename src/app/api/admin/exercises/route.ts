@@ -15,9 +15,9 @@ export async function POST(req: NextRequest) {
     const session = await auth()
     if (!session?.user || (session.user as any).role !== 'admin') return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     const body = await req.json()
-    const { exerciseId, level, type, theme, context, task, wordCount, targetConstructions, referenceAnswer } = body
+    const { exerciseId, level, type, theme, context, task, wordCount, targetConstructions, referenceAnswer, metadata } = body
     const exercise = await prisma.exercise.create({
-      data: { exerciseId: exerciseId || `EX-${Date.now()}`, level, type, theme, context, task, wordCount, targetConstructions, referenceAnswer },
+      data: { exerciseId: exerciseId || `EX-${Date.now()}`, level, type, theme, context, task, wordCount, targetConstructions, referenceAnswer, metadata: metadata || undefined },
     })
     return NextResponse.json({ exercise })
   } catch (error) { return NextResponse.json({ error: 'Internal server error' }, { status: 500 }) }

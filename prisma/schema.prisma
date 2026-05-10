@@ -22,6 +22,102 @@ model User {
   answers           PracticeRecord[]
   generatedExercises AIGeneratedExercise[]
   rssAnalyses        RSSAnalysis[]
+  constructionArticles GeneratedConstructionArticle[]
+  constructionMastery UserConstructionMastery[]
+}
+
+// ================ PLATFORM-CONTROLLED TEACHING CATALOG ================
+model Topic {
+  id                       String   @id @default(cuid())
+  slug                     String   @unique
+  label                    String
+  category                 String
+  description              String   @db.Text
+  minLevel                 String?
+  maxLevel                 String?
+  communicativeFunctions   String[] @default([])
+  emotionalFunctions       String[] @default([])
+  relatedConstructionFns   String[] @default([])
+  iconKey                  String?
+  metadata                 Json?
+  version                  String   @default("v1")
+  displayOrder             Int      @default(0)
+  active                   Boolean  @default(true)
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+
+  constructionTopics ConstructionTopic[]
+  exercises          Exercise[]
+  generatedExercises AIGeneratedExercise[]
+  usageLogs          ConstructionUsageLog[]
+
+  @@index([active, displayOrder])
+  @@index([category])
+}
+
+model WritingGoal {
+  id                       String   @id @default(cuid())
+  slug                     String   @unique
+  label                    String
+  description              String   @db.Text
+  communicativePurpose     String   @db.Text
+  recommendedExerciseTypes String[] @default([])
+  relatedConstructionFns   String[] @default([])
+  minLevel                 String?
+  maxLevel                 String?
+  metadata                 Json?
+  version                  String   @default("v1")
+  displayOrder             Int      @default(0)
+  active                   Boolean  @default(true)
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
+
+  constructionGoals ConstructionGoal[]
+  exercises         Exercise[]
+  generatedExercises AIGeneratedExercise[]
+  usageLogs         ConstructionUsageLog[]
+
+  @@index([active, displayOrder])
+}
+
+model LearningPath {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  label       String
+  description String   @db.Text
+  metadata    Json?
+  active      Boolean  @default(true)
+  displayOrder Int     @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  stages LearningPathStage[]
+
+  @@index([active, displayOrder])
+}
+
+model LearningPathStage {
+  id                            String   @id @default(cuid())
+  learningPathId                String
+  slug                          String   @unique
+  label                         String
+  description                   String   @db.Text
+  stageOrder                    Int
+  targetExpressionAbility       String
+  prerequisiteConstructionTypes String[] @default([])
+  recommendedExerciseTypes      String[] @default([])
+  nextRecommendedStageId        String?
+  metadata                      Json?
+  active                        Boolean  @default(true)
+  createdAt                     DateTime @default(now())
+  updatedAt                     DateTime @updatedAt
+
+  learningPath LearningPath @relation(fields: [learningPathId], references: [id], onDelete: Cascade)
+  exercises    Exercise[]
+  generatedExercises AIGeneratedExercise[]
+
+  @@index([learningPathId, stageOrder])
+  @@index([active])
 }
 
 // ================ CONSTRUCTION BANK (7682 entries from V11.xlsx) ================
@@ -38,11 +134,69 @@ model Construction {
   difficulty String
   level      String
   category   String
+  metadata   Json?
+  metadataVersion String @default("v1")
+  usageCount Int      @default(0)
+  lastUsedAt DateTime?
+  rotationWeight Float @default(1)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
+  topics        ConstructionTopic[]
+  goals         ConstructionGoal[]
+  exerciseTypes ConstructionExerciseType[]
+  usageLogs     ConstructionUsageLog[]
+  userMastery   UserConstructionMastery[]
+
   @@index([level])
   @@index([category])
+  @@index([difficulty])
+  @@index([usageCount])
+  @@index([lastUsedAt])
+}
+
+model ConstructionTopic {
+  constructionId String
+  topicId        String
+  relevanceScore Float    @default(0.5)
+  reason         String?
+  createdAt      DateTime @default(now())
+
+  construction Construction @relation(fields: [constructionId], references: [id], onDelete: Cascade)
+  topic        Topic        @relation(fields: [topicId], references: [id], onDelete: Cascade)
+
+  @@id([constructionId, topicId])
+  @@index([topicId, relevanceScore])
+  @@index([constructionId])
+}
+
+model ConstructionGoal {
+  constructionId String
+  goalId         String
+  relevanceScore Float    @default(0.5)
+  reason         String?
+  createdAt      DateTime @default(now())
+
+  construction Construction @relation(fields: [constructionId], references: [id], onDelete: Cascade)
+  goal         WritingGoal  @relation(fields: [goalId], references: [id], onDelete: Cascade)
+
+  @@id([constructionId, goalId])
+  @@index([goalId, relevanceScore])
+  @@index([constructionId])
+}
+
+model ConstructionExerciseType {
+  constructionId String
+  exerciseType   String
+  relevanceScore Float    @default(0.5)
+  reason         String?
+  createdAt      DateTime @default(now())
+
+  construction Construction @relation(fields: [constructionId], references: [id], onDelete: Cascade)
+
+  @@id([constructionId, exerciseType])
+  @@index([exerciseType, relevanceScore])
+  @@index([constructionId])
 }
 
 // ================ OFFICIAL EXERCISE BANK ================
@@ -57,12 +211,50 @@ model Exercise {
   wordCount           String
   targetConstructions String
   referenceAnswer     String   @db.Text
+  metadata            Json?
+  source              String   @default("official")
+  isPublic            Boolean  @default(true)
+  topicId             String?
+  goalId              String?
+  exerciseType        String?
+  constructionIds     Json?
+  qualityStatus       String   @default("approved")
+  publishStatus       String   @default("published")
+  reviewNotes         Json?
+  reviewedAt          DateTime?
+  approvedAt          DateTime?
+  archivedAt          DateTime?
+  rejectionReason     String?  @db.Text
+  pedagogicalFitScore Float?
+  fitReason           String?  @db.Text
+  generationVersion   String   @default("v1")
+  promptVersion       String?
+  skillsVersion       String?
+  constructionMetadataVersion String?
+  topicVersion        String?
+  contentSignature    String?
+  learningPathId      String?
+  learningStage       String?
+  learningPathStageId String?
+  targetExpressionAbility String?
+  prerequisiteConstructionTypes String[] @default([])
+  nextRecommendedStage String?
   isPublished         Boolean  @default(true)
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
 
+  topic Topic? @relation(fields: [topicId], references: [id])
+  goal  WritingGoal? @relation(fields: [goalId], references: [id])
+  learningPathStage LearningPathStage? @relation(fields: [learningPathStageId], references: [id])
+
   @@index([level])
   @@index([type])
+  @@index([source, qualityStatus, topicId, goalId, level])
+  @@index([publishStatus, source, topicId, goalId, level])
+  @@index([topicId, level])
+  @@index([goalId, level])
+  @@index([exerciseType, level])
+  @@index([contentSignature])
 }
 
 // ================ AI-GENERATED EXERCISES (per user) ================
@@ -78,12 +270,118 @@ model AIGeneratedExercise {
   wordCount           String
   targetConstructions String
   referenceAnswer     String   @db.Text
+  metadata            Json?
+  source              String   @default("user_generated")
+  isPublic            Boolean  @default(false)
+  topicId             String?
+  goalId              String?
+  exerciseType        String?
+  constructionIds     Json?
+  qualityStatus       String   @default("draft")
+  publishStatus       String   @default("draft")
+  reviewNotes         Json?
+  reviewedAt          DateTime?
+  approvedAt          DateTime?
+  archivedAt          DateTime?
+  rejectionReason     String?  @db.Text
+  qualityReviewResult Json?
+  pedagogicalFitScore Float?
+  fitReason           String?  @db.Text
+  generationVersion   String   @default("v1")
+  promptVersion       String?
+  skillsVersion       String?
+  constructionMetadataVersion String?
+  topicVersion        String?
+  contentSignature    String?
+  learningPathId      String?
+  learningStage       String?
+  learningPathStageId String?
+  targetExpressionAbility String?
+  prerequisiteConstructionTypes String[] @default([])
+  nextRecommendedStage String?
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id])
+  topic Topic? @relation(fields: [topicId], references: [id])
+  goal  WritingGoal? @relation(fields: [goalId], references: [id])
+  learningPathStage LearningPathStage? @relation(fields: [learningPathStageId], references: [id])
 
   @@index([userId])
+  @@index([source, qualityStatus, topicId, goalId, level])
+  @@index([publishStatus, source, topicId, goalId, level])
+  @@index([userId, createdAt])
+  @@index([contentSignature])
+}
+
+model UserConstructionMastery {
+  id                   String   @id @default(cuid())
+  userId               String
+  constructionId        String
+  exposureCount         Int      @default(0)
+  attemptCount          Int      @default(0)
+  successfulUseCount    Int      @default(0)
+  weakUseCount          Int      @default(0)
+  recommendedAgainCount Int      @default(0)
+  lastSeenAt            DateTime?
+  lastUsedAt            DateTime?
+  masteryLevel          String   @default("new")
+  notes                 Json?
+  metadata              Json?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  construction Construction @relation(fields: [constructionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, constructionId])
+  @@index([userId, masteryLevel])
+  @@index([constructionId])
+  @@index([lastSeenAt])
+}
+
+model ConstructionUsageLog {
+  id             String   @id @default(cuid())
+  constructionId String
+  exerciseId     String?
+  topicId        String?
+  goalId         String?
+  level          String?
+  exerciseType   String?
+  source         String
+  usedAt         DateTime @default(now())
+  metadata       Json?
+
+  construction Construction @relation(fields: [constructionId], references: [id], onDelete: Cascade)
+  topic        Topic?       @relation(fields: [topicId], references: [id])
+  goal         WritingGoal? @relation(fields: [goalId], references: [id])
+
+  @@index([constructionId, usedAt])
+  @@index([topicId, goalId, level])
+  @@index([exerciseType, level])
+  @@index([source, usedAt])
+}
+
+// ================ CONSTRUCTION-GUIDED ARTICLE STUDIO ================
+model GeneratedConstructionArticle {
+  id                          String   @id @default(cuid())
+  ownerUserId                 String
+  selectedConstructionIds      Json
+  title                       String
+  topic                       String
+  tone                        String?
+  articleContent              String   @db.Text
+  highlightedConstructionData Json?
+  teachingNotes               Json?
+  constructionUsageExplanations Json?
+  promptVersion               String   @default("construction-article-v1")
+  generationVersion           String   @default("construction-article-v1")
+  createdAt                   DateTime @default(now())
+  updatedAt                   DateTime @updatedAt
+
+  owner User @relation(fields: [ownerUserId], references: [id], onDelete: Cascade)
+
+  @@index([ownerUserId, createdAt])
 }
 
 // ================ PRACTICE RECORDS (answers per user) ================

@@ -4,14 +4,22 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node -e \"const fs=require('fs');const p='.next/standalone/.next';fs.cpSync('.next/static',p+'/static',{recursive:true});fs.cpSync('public',p+'/../public',{recursive:true,force:true})\"",
+    "build": "next build && node scripts/copy-standalone-assets.cjs",
     "start": "next start",
     "deploy": "npm run build && pm2 restart constructions || true",
     "lint": "next lint",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "db:seed": "npx tsx prisma/seed.ts"
+    "db:seed": "npx tsx prisma/seed.ts",
+    "db:upgrade-writing": "npx tsx scripts/upgrade-writing-exercises.ts",
+    "db:enrich-constructions": "npx tsx scripts/enrich-construction-metadata.ts",
+    "db:seed-teaching-kb": "npx tsx scripts/seed-teaching-knowledge-base.ts",
+    "db:cleanup-constructions": "npx tsx scripts/cleanup-construction-library.ts",
+    "db:refine-constructions": "npx tsx scripts/refine-active-construction-library.ts",
+    "db:pregenerate-official": "npx tsx scripts/pre-generate-official-exercises.ts",
+    "db:seed-topic-goal-bank": "npx tsx scripts/seed-topic-goal-exercise-bank.ts",
+    "db:seed-high-value-constructions": "npx tsx scripts/seed-high-value-constructions.ts"
   },
   "prisma": {
     "seed": "npx tsx prisma/seed.ts"
@@ -62,6 +70,7 @@
     "next": "^15.0.0",
     "next-auth": "^5.0.0-beta.25",
     "next-themes": "^0.4.6",
+    "openai": "^6.37.0",
     "react": "^19.2.0",
     "react-day-picker": "^9.13.0",
     "react-dom": "^19.2.0",

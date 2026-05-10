@@ -1,0 +1,168 @@
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\System Volume Information'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\pagefile.sys'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\System Volume Information'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\pagefile.sys'
+
+[1m[33mwarn[39m[22m - The class `duration-[var(--duration-fast)]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;var(--duration-fast)&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `duration-[var(--duration-normal)]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;var(--duration-normal)&rsqb;` to silence this warning.
+
+[1m[33mwarn[39m[22m - The class `duration-[var(--duration-slow)]` is ambiguous and matches multiple utilities.
+[1m[33mwarn[39m[22m - If this is content and not a class, replace it with `duration-&lsqb;var(--duration-slow)&rsqb;` to silence this warning.
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: '2806174116'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+[TypeError: Cannot read properties of undefined (reading 'call')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
+  page: '/practice'
+}
+ ⨯ Error: Cannot find module './5873.js'
+Require stack:
+- F:\桌面\构式二代\constructions-main\.next\server\webpack-runtime.js
+- F:\桌面\构式二代\constructions-main\.next\server\app\(main)\practice\page.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\server\require.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\server\load-components.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\build\utils.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\build\swc\options.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\build\swc\index.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\server\config.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\server\next.js
+- F:\桌面\构式二代\constructions-main\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (F:\桌面\构式二代\constructions-main\.next\server\app\api\admin\stats\route.js:1:10471)
+    at Object.<anonymous> (F:\桌面\构式二代\constructions-main\.next\server\app\api\admin\stats\route.js:1:10528) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/api/admin/stats'
+}
+Failed to recommend exercise: Error: The selected topic or writing goal is not available.
+    at resolveTeachingSelection (src\lib\teaching\catalog.ts:58:30)
+    at async GET (src\app\api\exercises\recommend\route.ts:13:23)
+  56 |   ])
+  57 |
+> 58 |   if (!topic || !goal) throw new Error('The selected topic or writing goal is not available.')
+     |                              ^
+  59 |   if (!levelMatches(level, topic.minLevel, topic.maxLevel) || !levelMatches(level, goal.minLevel, goal.maxLevel)) {
+  60 |     throw new Error('The selected topic and goal are not suitable for this level.')
+  61 |   }
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '3173921352'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '2874828873'
+}
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
+  digest: '2806174116'
+}
+ ⨯ Error: Could not find the module "F:\桌面\构式二代\constructions-main\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '591441894'
+}
+[TypeError: Cannot read properties of undefined (reading 'call')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading 'call')] {
+  page: '/constructions'
+}
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\System Volume Information'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'F:\pagefile.sys'

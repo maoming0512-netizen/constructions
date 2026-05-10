@@ -28,6 +28,11 @@ import { constructionExpandSkill } from './skills/constructionExpand.skill'
 import { analyzeAnswerSkill } from './skills/analyzeAnswer.skill'
 import { genWritingSkill } from './skills/genWriting.skill'
 import { findConstructionsSkill } from './skills/findConstructions.skill'
+import { constructionAnalyzeSkill } from './skills/constructionAnalyze.skill'
+import { exercisePlanSkill } from './skills/exercisePlan.skill'
+import { adaptiveExerciseGenerateSkill } from './skills/adaptiveExerciseGenerate.skill'
+import { exerciseQualityReviewSkill } from './skills/exerciseQualityReview.skill'
+import { constructionArticleGenerateSkill } from './skills/constructionArticleGenerate.skill'
 
 const skillRegistry: Record<string, { config: AISkillConfig; fallback: (input: AISkillInput) => AISkillResult<any> }> = {
   [analyzeSentenceSkill.config.name]: analyzeSentenceSkill,
@@ -38,6 +43,11 @@ const skillRegistry: Record<string, { config: AISkillConfig; fallback: (input: A
   [analyzeAnswerSkill.config.name]: analyzeAnswerSkill,
   [genWritingSkill.config.name]: genWritingSkill,
   [findConstructionsSkill.config.name]: findConstructionsSkill,
+  [constructionAnalyzeSkill.config.name]: constructionAnalyzeSkill,
+  [exercisePlanSkill.config.name]: exercisePlanSkill,
+  [adaptiveExerciseGenerateSkill.config.name]: adaptiveExerciseGenerateSkill,
+  [exerciseQualityReviewSkill.config.name]: exerciseQualityReviewSkill,
+  [constructionArticleGenerateSkill.config.name]: constructionArticleGenerateSkill,
 }
 
 export function listSkills(): string[] {
@@ -53,9 +63,9 @@ export function getSkillConfig(skillName: string): AISkillConfig | undefined {
 let globalApiConfig: AIApiConfig | null = null
 
 export const DEFAULT_AI_CONFIG: AIApiConfig = {
-  apiKey: 'sk-ada14a05ae6a427a9251a9bf72b778e9',
-  baseURL: 'https://api.deepseek.com',
-  model: 'deepseek-v4-pro',
+  apiKey: process.env.DEEPSEEK_API_KEY || process.env.AI_API_KEY || '',
+  baseURL: process.env.DEEPSEEK_BASE_URL || process.env.AI_BASE_URL || 'https://api.deepseek.com',
+  model: process.env.DEEPSEEK_MODEL || process.env.AI_MODEL || 'deepseek-chat',
 }
 
 function persistConfig(config: AIApiConfig): void {
@@ -81,7 +91,7 @@ export function setAIConfig(config: AIApiConfig): void {
 
 export function getAIConfig(): AIApiConfig {
   // Always use default config — reliable, no localStorage interference
-  return DEFAULT_AI_CONFIG
+  return loadPersistedConfig() || DEFAULT_AI_CONFIG
 }
 
 export function isAIConfigured(): boolean {
@@ -202,6 +212,8 @@ async function callOpenAINonStream(
     ],
     temperature: skillConfig.temperature ?? 0.3,
     max_tokens: skillConfig.maxTokens ?? 4096,
+    stream: false,
+    response_format: { type: 'json_object' },
   }
 
   const signal = createTimeoutSignal(REQUEST_TIMEOUT_MS)
@@ -239,14 +251,13 @@ function parseSSELine(line: string): { content?: string; reasoning?: string } | 
     if (!delta) return null
     
     const content = delta.content || ''
-    const reasoning = delta.reasoning_content || ''
+    const reasoning = ''
     
     // 如果两者都为空，返回null
     if (!content && !reasoning) return null
     
     return { 
-      ...(content && { content }),
-      ...(reasoning && { reasoning })
+      ...(content && { content })
     }
   } catch {
     return null
@@ -273,8 +284,6 @@ export async function* callOpenAIStream(
     temperature: skillConfig.temperature ?? 0.4,
     max_tokens: skillConfig.maxTokens ?? 4096,
     stream: true,
-    thinking: { type: 'enabled' },
-    reasoning_effort: 'high',
   }
 
   console.log(`[AI] Streaming "${skillConfig.name}" → ${model}`)
@@ -313,9 +322,6 @@ export async function* callOpenAIStream(
         const parsed = parseSSELine(line)
         if (parsed) {
           // 优先返回reasoning，让用户看到思考过程
-          if (parsed.reasoning) {
-            yield { type: 'reasoning', text: parsed.reasoning }
-          }
           if (parsed.content) {
             yield { type: 'content', text: parsed.content }
           }
@@ -345,17 +351,23 @@ export async function callSkill<T = any>(
   }
 
   try {
-    const rawText = await withRetry(() => callOpenAINonStream(skill.config, input, apiConfig))
+    let rawText = await withRetry(() => callOpenAINonStream(skill.config, input, apiConfig))
 
     // Try to parse as JSON
     let parsed: any
     try {
       parsed = JSON.parse(rawText)
     } catch {
-      // Try extracting JSON from markdown code block
       const match = rawText.match(/```(?:json)?\s*([\s\S]*?)\s*```/)
-      if (match) parsed = JSON.parse(match[1])
-      else throw new Error('Invalid JSON response')
+      if (match) {
+        parsed = JSON.parse(match[1])
+      } else {
+        rawText = await withRetry(() => callOpenAINonStream(skill.config, {
+          ...input,
+          _dynamicSystemPrompt: `${resolveSystemPrompt(skill.config, input)}\n\nYour previous response was not valid JSON. Return ONLY one strict JSON object that matches the schema. Do not include markdown, comments, explanations, or chain-of-thought.`,
+        }, apiConfig), 1)
+        parsed = JSON.parse(rawText)
+      }
     }
 
     // Validate required fields

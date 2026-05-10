@@ -10,7 +10,7 @@ import { useAuth } from '@/context/AuthContext'
 
 const navLinks = [
   { label: 'Practice', href: '/practice', requiresAuth: false },
-  { label: 'Reader', href: '/constructions', requiresAuth: false },
+  { label: 'Studio', href: '/constructions', requiresAuth: false },
   { label: 'History', href: '/history', requiresAuth: false },
   { label: 'AI Lab', href: '/ai-lab', requiresAuth: false },
   { label: 'About', href: '/about', requiresAuth: false },

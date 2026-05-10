@@ -1,3 +1,4 @@
+import { useCallback } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   BookOpen,
@@ -16,6 +17,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { cn } from '@/lib/utils'
+import { useAuth } from '@/context/AuthContext'
 
 import {
   InputFlood,
@@ -400,9 +402,38 @@ export default function PracticeLoop({
   const loop = usePracticeLoop({
     constructionId: construction.id,
   })
+  const { isAuthenticated } = useAuth()
 
   const currentStep = loop.state.currentStep
   const currentStepIndex = loop.state.currentStepIndex
+
+  const savePracticeRecord = useCallback((answer: string) => {
+    if (!answer.trim()) return
+    const record = {
+      id: `local-${Date.now()}`,
+      exerciseId: `loop-${construction.id}`,
+      exerciseType: 'construction-loop',
+      exerciseTheme: construction.name,
+      studentAnswer: answer.trim(),
+      wordCount: answer.trim().split(/\s+/).filter(Boolean).length,
+      createdAt: new Date().toISOString(),
+      duration: null,
+    }
+    try {
+      const raw = localStorage.getItem('cs_practice_records')
+      const list = raw ? JSON.parse(raw) : []
+      list.unshift(record)
+      if (list.length > 200) list.length = 200
+      localStorage.setItem('cs_practice_records', JSON.stringify(list))
+    } catch {}
+    if (isAuthenticated) {
+      fetch('/api/user/records', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(record),
+      }).catch(() => {})
+    }
+  }, [construction.id, construction.name, isAuthenticated])
 
   // Handlers for each step
   const handleInputFloodComplete = () => loop.goNext()
@@ -439,6 +470,8 @@ export default function PracticeLoop({
     loop.setRevisedSentence(revisedSentence)
     loop.setStepResult('revision', { revisedSentence })
     loop.goNext()
+
+    savePracticeRecord(loop.state.originalSentence || revisedSentence)
 
     // After revision, auto-generate mock AI feedback for draft 2
     // In a real app, this would call the AI service again

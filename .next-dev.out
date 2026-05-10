@@ -1,0 +1,323 @@
+
+> constructscape@0.1.0 dev
+> next dev -p 3000
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3000
+   - Network:      http://26.181.136.143:3000
+   - Environments: .env.local, .env
+
+ ✓ Starting...
+ ✓ Ready in 3.2s
+ ○ Compiling /practice ...
+ ✓ Compiled /practice in 2.5s (2005 modules)
+ HEAD /practice 200 in 6027ms
+ HEAD /practice 200 in 114ms
+ ✓ Compiled /middleware in 221ms (114 modules)
+ ○ Compiling /api/admin/stats ...
+ ✓ Compiled /api/admin/stats in 1351ms (2232 modules)
+ POST /api/admin/stats 200 in 2248ms
+ POST /api/admin/stats 200 in 2323ms
+ GET /api/exercises/recommend?topicId=cmozjq6hk0008tpygxsehifyc&goalId=cmozjq6i3000ktpyganjb1gfr&level=senior 200 in 2367ms
+ HEAD /api/construction-studio/constructions?page=1&pageSize=12&category=recommended&search= 200 in 2371ms
+ ○ Compiling /constructions ...
+ ✓ Compiled /constructions in 844ms (1752 modules)
+ GET /constructions 200 in 1299ms
+ ○ Compiling /api/construction-studio/constructions ...
+ ✓ Compiled /api/construction-studio/constructions in 584ms (1977 modules)
+ POST /api/admin/stats 200 in 822ms
+ POST /api/admin/stats 200 in 887ms
+ POST /api/admin/stats 200 in 890ms
+ POST /api/admin/stats 200 in 829ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=recommended&search= 200 in 867ms
+ GET /api/construction-studio/constructions?mode=categories 200 in 876ms
+ GET /api/auth/session 200 in 1552ms
+ GET /api/auth/session 200 in 27ms
+ POST /api/admin/stats 200 in 29ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=general_expression&search= 200 in 44ms
+ POST /api/admin/stats 200 in 44ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=phrase&search= 200 in 38ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=action_sequence&search= 200 in 42ms
+ POST /api/admin/stats 200 in 34ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=cause_result&search= 200 in 65ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=describe_action&search= 200 in 36ms
+ POST /api/admin/stats 200 in 32ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=comparison&search= 200 in 41ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=compare&search= 200 in 45ms
+ POST /api/admin/stats 200 in 23ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=express_preference&search= 200 in 44ms
+ POST /api/admin/stats 200 in 36ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=invitation_or_offer&search= 200 in 52ms
+ POST /api/admin/stats 200 in 38ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=contrast_or_turn&search= 200 in 38ms
+ POST /api/admin/stats 200 in 27ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=explanation&search= 200 in 39ms
+ POST /api/admin/stats 200 in 28ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=share_experience&search= 200 in 61ms
+ POST /api/admin/stats 200 in 49ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=describe_emotion&search= 200 in 34ms
+ POST /api/admin/stats 200 in 23ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=explain&search= 200 in 55ms
+ POST /api/admin/stats 200 in 54ms
+ GET /api/construction-studio/constructions?page=2&pageSize=12&category=explain&search= 200 in 38ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=compare&search= 200 in 35ms
+ POST /api/admin/stats 200 in 26ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=recommended&search= 200 in 27ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=2&pageSize=12&category=recommended&search= 200 in 26ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=3&pageSize=12&category=recommended&search= 200 in 41ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=4&pageSize=12&category=recommended&search= 200 in 38ms
+ POST /api/admin/stats 200 in 29ms
+ GET /api/construction-studio/constructions?page=5&pageSize=12&category=recommended&search= 200 in 37ms
+ POST /api/admin/stats 200 in 27ms
+ GET /api/construction-studio/constructions?page=6&pageSize=12&category=recommended&search= 200 in 33ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=7&pageSize=12&category=recommended&search= 200 in 36ms
+ POST /api/admin/stats 200 in 25ms
+ GET /api/construction-studio/constructions?page=8&pageSize=12&category=recommended&search= 200 in 37ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=9&pageSize=12&category=recommended&search= 200 in 41ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=10&pageSize=12&category=recommended&search= 200 in 39ms
+ POST /api/admin/stats 200 in 27ms
+ GET /api/construction-studio/constructions?page=11&pageSize=12&category=recommended&search= 200 in 62ms
+ POST /api/admin/stats 200 in 20ms
+ GET /api/construction-studio/constructions?page=12&pageSize=12&category=recommended&search= 200 in 59ms
+ POST /api/admin/stats 200 in 26ms
+ GET /api/construction-studio/constructions?page=13&pageSize=12&category=recommended&search= 200 in 31ms
+ POST /api/admin/stats 200 in 16ms
+ GET /api/construction-studio/constructions?page=14&pageSize=12&category=recommended&search= 200 in 34ms
+ POST /api/admin/stats 200 in 20ms
+ GET /api/construction-studio/constructions?page=15&pageSize=12&category=recommended&search= 200 in 46ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=16&pageSize=12&category=recommended&search= 200 in 36ms
+ POST /api/admin/stats 200 in 17ms
+ GET /api/construction-studio/constructions?page=17&pageSize=12&category=recommended&search= 200 in 33ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=18&pageSize=12&category=recommended&search= 200 in 56ms
+ POST /api/admin/stats 200 in 17ms
+ GET /api/construction-studio/constructions?page=19&pageSize=12&category=recommended&search= 200 in 36ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=20&pageSize=12&category=recommended&search= 200 in 38ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=21&pageSize=12&category=recommended&search= 200 in 48ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=22&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=23&pageSize=12&category=recommended&search= 200 in 46ms
+ POST /api/admin/stats 200 in 21ms
+ GET /api/construction-studio/constructions?page=24&pageSize=12&category=recommended&search= 200 in 60ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=25&pageSize=12&category=recommended&search= 200 in 45ms
+ POST /api/admin/stats 200 in 16ms
+ GET /api/construction-studio/constructions?page=26&pageSize=12&category=recommended&search= 200 in 39ms
+ POST /api/admin/stats 200 in 16ms
+ GET /api/construction-studio/constructions?page=27&pageSize=12&category=recommended&search= 200 in 53ms
+ POST /api/admin/stats 200 in 21ms
+ GET /api/construction-studio/constructions?page=28&pageSize=12&category=recommended&search= 200 in 54ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=29&pageSize=12&category=recommended&search= 200 in 44ms
+ POST /api/admin/stats 200 in 22ms
+ GET /api/construction-studio/constructions?page=30&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=31&pageSize=12&category=recommended&search= 200 in 59ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=32&pageSize=12&category=recommended&search= 200 in 35ms
+ POST /api/admin/stats 200 in 23ms
+ POST /api/admin/stats 200 in 22ms
+ GET /api/construction-studio/constructions?page=33&pageSize=12&category=recommended&search= 200 in 42ms
+ GET /api/construction-studio/constructions?page=34&pageSize=12&category=recommended&search= 200 in 38ms
+ POST /api/admin/stats 200 in 19ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=35&pageSize=12&category=recommended&search= 200 in 36ms
+ GET /api/construction-studio/constructions?page=36&pageSize=12&category=recommended&search= 200 in 52ms
+ POST /api/admin/stats 200 in 21ms
+ GET /api/construction-studio/constructions?page=37&pageSize=12&category=recommended&search= 200 in 75ms
+ POST /api/admin/stats 200 in 34ms
+ GET /api/construction-studio/constructions?page=38&pageSize=12&category=recommended&search= 200 in 55ms
+ POST /api/admin/stats 200 in 36ms
+ GET /api/construction-studio/constructions?page=39&pageSize=12&category=recommended&search= 200 in 60ms
+ POST /api/admin/stats 200 in 32ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=40&pageSize=12&category=recommended&search= 200 in 50ms
+ POST /api/admin/stats 200 in 27ms
+ GET /api/construction-studio/constructions?page=41&pageSize=12&category=recommended&search= 200 in 64ms
+ GET /api/construction-studio/constructions?page=42&pageSize=12&category=recommended&search= 200 in 81ms
+ POST /api/admin/stats 200 in 53ms
+ POST /api/admin/stats 200 in 21ms
+ GET /api/construction-studio/constructions?page=43&pageSize=12&category=recommended&search= 200 in 51ms
+ GET /api/construction-studio/constructions?page=44&pageSize=12&category=recommended&search= 200 in 64ms
+ POST /api/admin/stats 200 in 47ms
+ POST /api/admin/stats 200 in 25ms
+ GET /api/construction-studio/constructions?page=45&pageSize=12&category=recommended&search= 200 in 66ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=46&pageSize=12&category=recommended&search= 200 in 38ms
+ POST /api/admin/stats 200 in 20ms
+ GET /api/construction-studio/constructions?page=47&pageSize=12&category=recommended&search= 200 in 39ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=48&pageSize=12&category=recommended&search= 200 in 58ms
+ POST /api/admin/stats 200 in 16ms
+ GET /api/construction-studio/constructions?page=49&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 33ms
+ GET /api/construction-studio/constructions?page=50&pageSize=12&category=recommended&search= 200 in 57ms
+ GET /api/construction-studio/constructions?page=51&pageSize=12&category=recommended&search= 200 in 77ms
+ POST /api/admin/stats 200 in 29ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=52&pageSize=12&category=recommended&search= 200 in 37ms
+ POST /api/admin/stats 200 in 14ms
+ GET /api/construction-studio/constructions?page=53&pageSize=12&category=recommended&search= 200 in 37ms
+ POST /api/admin/stats 200 in 22ms
+ GET /api/construction-studio/constructions?page=54&pageSize=12&category=recommended&search= 200 in 48ms
+ GET /api/construction-studio/constructions?page=55&pageSize=12&category=recommended&search= 200 in 67ms
+ POST /api/admin/stats 200 in 36ms
+ POST /api/admin/stats 200 in 23ms
+ GET /api/construction-studio/constructions?page=56&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 17ms
+ GET /api/construction-studio/constructions?page=57&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=58&pageSize=12&category=recommended&search= 200 in 47ms
+ POST /api/admin/stats 200 in 25ms
+ GET /api/construction-studio/constructions?page=59&pageSize=12&category=recommended&search= 200 in 44ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=60&pageSize=12&category=recommended&search= 200 in 45ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=61&pageSize=12&category=recommended&search= 200 in 54ms
+ POST /api/admin/stats 200 in 26ms
+ GET /api/construction-studio/constructions?page=62&pageSize=12&category=recommended&search= 200 in 66ms
+ POST /api/admin/stats 200 in 22ms
+ GET /api/construction-studio/constructions?page=63&pageSize=12&category=recommended&search= 200 in 61ms
+ POST /api/admin/stats 200 in 14ms
+ GET /api/construction-studio/constructions?page=64&pageSize=12&category=recommended&search= 200 in 49ms
+ POST /api/admin/stats 200 in 40ms
+ GET /api/construction-studio/constructions?page=65&pageSize=12&category=recommended&search= 200 in 72ms
+ POST /api/admin/stats 200 in 16ms
+ GET /api/construction-studio/constructions?page=66&pageSize=12&category=recommended&search= 200 in 46ms
+ POST /api/admin/stats 200 in 22ms
+ GET /api/construction-studio/constructions?page=67&pageSize=12&category=recommended&search= 200 in 52ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=68&pageSize=12&category=recommended&search= 200 in 55ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=69&pageSize=12&category=recommended&search= 200 in 49ms
+ GET /api/construction-studio/constructions?page=70&pageSize=12&category=recommended&search= 200 in 91ms
+ POST /api/admin/stats 200 in 41ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=71&pageSize=12&category=recommended&search= 200 in 44ms
+ POST /api/admin/stats 200 in 25ms
+ GET /api/construction-studio/constructions?page=72&pageSize=12&category=recommended&search= 200 in 57ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=73&pageSize=12&category=recommended&search= 200 in 57ms
+ POST /api/admin/stats 200 in 24ms
+ GET /api/construction-studio/constructions?page=74&pageSize=12&category=recommended&search= 200 in 56ms
+ POST /api/admin/stats 200 in 15ms
+ GET /api/construction-studio/constructions?page=75&pageSize=12&category=recommended&search= 200 in 43ms
+ POST /api/admin/stats 200 in 31ms
+ GET /api/construction-studio/constructions?page=76&pageSize=12&category=recommended&search= 200 in 72ms
+ POST /api/admin/stats 200 in 14ms
+ GET /api/construction-studio/constructions?page=77&pageSize=12&category=recommended&search= 200 in 42ms
+ POST /api/admin/stats 200 in 34ms
+ GET /api/construction-studio/constructions?page=78&pageSize=12&category=recommended&search= 200 in 77ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=79&pageSize=12&category=recommended&search= 200 in 50ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=80&pageSize=12&category=recommended&search= 200 in 45ms
+ POST /api/admin/stats 200 in 17ms
+ GET /api/construction-studio/constructions?page=81&pageSize=12&category=recommended&search= 200 in 49ms
+ POST /api/admin/stats 200 in 40ms
+ GET /api/construction-studio/constructions?page=82&pageSize=12&category=recommended&search= 200 in 75ms
+ POST /api/admin/stats 200 in 37ms
+ GET /api/construction-studio/constructions?page=83&pageSize=12&category=recommended&search= 200 in 57ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=84&pageSize=12&category=recommended&search= 200 in 70ms
+ POST /api/admin/stats 200 in 17ms
+ GET /api/construction-studio/constructions?page=85&pageSize=12&category=recommended&search= 200 in 51ms
+ POST /api/admin/stats 200 in 19ms
+ GET /api/construction-studio/constructions?page=86&pageSize=12&category=recommended&search= 200 in 53ms
+ POST /api/admin/stats 200 in 34ms
+ GET /api/construction-studio/constructions?page=87&pageSize=12&category=recommended&search= 200 in 91ms
+ POST /api/admin/stats 200 in 34ms
+ GET /api/construction-studio/constructions?page=88&pageSize=12&category=recommended&search= 200 in 80ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=89&pageSize=12&category=recommended&search= 200 in 64ms
+ POST /api/admin/stats 200 in 23ms
+ GET /api/construction-studio/constructions?page=90&pageSize=12&category=recommended&search= 200 in 88ms
+ POST /api/admin/stats 200 in 20ms
+ GET /api/construction-studio/constructions?page=91&pageSize=12&category=recommended&search= 200 in 56ms
+ POST /api/admin/stats 200 in 18ms
+ GET /api/construction-studio/constructions?page=92&pageSize=12&category=recommended&search= 200 in 50ms
+ GET /constructions 200 in 140ms
+ ✓ Compiled /practice in 493ms (1321 modules)
+ GET /practice 200 in 673ms
+ ○ Compiling /api/practice/options ...
+ ✓ Compiled /api/practice/options in 2.6s (2267 modules)
+ GET /api/practice/options 200 in 2731ms
+ POST /api/admin/stats 200 in 2702ms
+ GET /api/practice/options 200 in 97ms
+ POST /api/admin/stats 200 in 34ms
+ GET /practice 200 in 307ms
+ ✓ Compiled /api/exercises/recommend in 256ms (1327 modules)
+ POST /api/admin/stats 200 in 634ms
+ GET /api/exercises/recommend?topicId=cmozjq6gp0000tpyg7cs1kyn4&goalId=cmozjq6hy000htpygp5ptkxky&level=junior 200 in 668ms
+ ✓ Compiled in 674ms (2270 modules)
+ GET /practice 200 in 108ms
+ ✓ Compiled in 1034ms (2041 modules)
+ GET /practice 200 in 190ms
+ ○ Compiling /ai-lab ...
+ ✓ Compiled /ai-lab in 889ms (2091 modules)
+ GET /ai-lab 200 in 1039ms
+ ✓ Compiled /api/admin/stats in 257ms (1151 modules)
+ ✓ Compiled (1355 modules)
+ GET /api/construction-studio/constructions?mode=categories 200 in 891ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=recommended&search= 200 in 875ms
+ POST /api/admin/stats 200 in 880ms
+ POST /api/admin/stats 200 in 845ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 747ms (2342 modules)
+ GET /about 200 in 883ms
+ GET /practice 200 in 51ms
+ ○ Compiling /api/practice/options ...
+ ✓ Compiled /api/practice/options in 535ms (1374 modules)
+ GET /api/practice/options 200 in 955ms
+ POST /api/admin/stats 200 in 929ms
+ GET /api/practice/options 200 in 25ms
+ ✓ Compiled /api/exercises/recommend in 274ms (1377 modules)
+ POST /api/admin/stats 200 in 628ms
+ POST /api/admin/stats 200 in 652ms
+ GET /api/exercises/recommend?topicId=cmozjq6gp0000tpyg7cs1kyn4&goalId=cmozjq6hy000htpygp5ptkxky&level=junior 200 in 662ms
+ ○ Compiling / ...
+ ✓ Compiled / in 945ms (2362 modules)
+ GET / 200 in 1067ms
+ ✓ Compiled in 953ms (2118 modules)
+ GET / 200 in 227ms
+ ✓ Compiled in 912ms (2118 modules)
+ GET / 200 in 143ms
+ ✓ Compiled in 785ms (2118 modules)
+ GET / 200 in 110ms
+ ✓ Compiled in 576ms (2118 modules)
+ GET / 200 in 115ms
+ ○ Compiling /api/admin/stats ...
+ ✓ Compiled /api/admin/stats in 632ms (1147 modules)
+ ✓ Compiled in 0ms (1351 modules)
+ ✓ Compiled in 0ms (1351 modules)
+ ✓ Compiled in 1ms (1351 modules)
+ GET /api/construction-studio/constructions?mode=categories 200 in 1868ms
+ GET /api/construction-studio/constructions?page=1&pageSize=12&category=recommended&search= 200 in 1874ms
+ GET / 200 in 1883ms
+ POST /api/admin/stats 200 in 2519ms
+ POST /api/admin/stats 200 in 2519ms
+ ✓ Compiled /api/admin/stats in 451ms (1149 modules)
+ ✓ Compiled (1353 modules)
+ GET /api/exercises/recommend?topicId=ai-learning-tools&goalId=soften-and-repair&level=senior 500 in 4359ms
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 4.2s (2675 modules)
+ GET / 200 in 1015ms
+ GET /practice 500 in 9207ms
+ GET /constructions 500 in 9187ms
+ POST /api/admin/stats 500 in 9202ms
+ GET / 200 in 318ms
+[?25h

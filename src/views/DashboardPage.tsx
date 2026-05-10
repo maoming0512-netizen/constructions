@@ -12,7 +12,6 @@ import {
   TrendingUp,
   FileText,
   Globe,
-  Rss,
   ArrowRight,
 } from 'lucide-react'
 import { useAuth } from '@/context/AuthContext'
@@ -64,7 +63,7 @@ export default function DashboardPage() {
     } else {
       const saved = localStorage.getItem('cs_practice_records')
       const records = saved ? JSON.parse(saved) : []
-      const rssSaved = localStorage.getItem('cs_rss_analyses')
+      const rssSaved = localStorage.getItem('cs_construction_articles')
       const rssRecords = rssSaved ? JSON.parse(rssSaved) : []
 
       const totalWords = records.reduce((s: number, r: any) => s + (r.wordCount || 0), 0)
@@ -123,7 +122,7 @@ export default function DashboardPage() {
             <StatCard icon={<PenLine className="w-4 h-4 text-blue-500" />} label="Exercises" value={stats.totalExercises} sub="total completed" delay={0} />
             <StatCard icon={<FileText className="w-4 h-4 text-emerald-500" />} label="Words Written" value={stats.totalWords.toLocaleString()} sub={`~${stats.avgWordsPerExercise} words/exercise`} delay={0.1} />
             <StatCard icon={<TrendingUp className="w-4 h-4 text-violet-500" />} label="This Week" value={stats.exercisesThisWeek} sub={`${stats.wordsThisWeek.toLocaleString()} words`} delay={0.2} />
-            <StatCard icon={<Sparkles className="w-4 h-4 text-amber-500" />} label="RSS Analyses" value={stats.rssAnalyses} sub="articles analyzed" delay={0.3} />
+            <StatCard icon={<Sparkles className="w-4 h-4 text-amber-500" />} label="Studio Articles" value={stats.rssAnalyses} sub="construction readings" delay={0.3} />
           </div>
 
           {/* CTA Banner */}
@@ -223,13 +222,13 @@ export default function DashboardPage() {
                 <ChevronRight className="w-4 h-4 text-muted-foreground" />
               </Link>
               <Link href="/constructions" className="flex items-center justify-between p-3 rounded-lg hover:bg-accent transition-colors">
-                <span className="flex items-center gap-2 text-sm"><Rss className="w-4 h-4 text-amber-500" /> Reader</span>
+                <span className="flex items-center gap-2 text-sm"><Sparkles className="w-4 h-4 text-amber-500" /> Studio</span>
                 <ChevronRight className="w-4 h-4 text-muted-foreground" />
               </Link>
             </motion.div>
           </div>
 
-          {/* RSS Analyses Summary (if any) */}
+          {/* Studio Articles Summary (if any) */}
           {stats.rssAnalyses > 0 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
               className="rounded-xl border bg-card p-5">
@@ -237,12 +236,12 @@ export default function DashboardPage() {
                 <div className="flex items-center gap-3">
                   <Sparkles className="w-5 h-5 text-violet-500" />
                   <div>
-                    <p className="text-sm font-semibold">{stats.rssAnalyses} Article Analyses</p>
-                    <p className="text-xs text-muted-foreground">Saved construction analyses from RSS articles</p>
+                    <p className="text-sm font-semibold">{stats.rssAnalyses} Studio Articles</p>
+                    <p className="text-xs text-muted-foreground">Saved construction-guided readings</p>
                   </div>
                 </div>
                 <Link href="/history" className="text-sm text-[--lake-blue] hover:underline">
-                  Browse analyses →
+                  Browse history →
                 </Link>
               </div>
             </motion.div>

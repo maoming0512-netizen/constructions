@@ -10,7 +10,24 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-    const { exerciseId, level, type, theme, context, task, wordCount, targetConstructions, referenceAnswer } = body
+    const {
+      exerciseId,
+      level,
+      type,
+      theme,
+      context,
+      task,
+      wordCount,
+      targetConstructions,
+      referenceAnswer,
+      metadata,
+      topicId,
+      goalId,
+      exerciseType,
+      constructionIds,
+      qualityStatus,
+      qualityReviewResult,
+    } = body
 
     if (!exerciseId || !context || !task) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -28,6 +45,15 @@ export async function POST(req: NextRequest) {
         wordCount: wordCount || '',
         targetConstructions: targetConstructions || '',
         referenceAnswer: referenceAnswer || '',
+        metadata: metadata || undefined,
+        source: 'user_generated',
+        isPublic: false,
+        topicId: topicId || metadata?.topic_id || undefined,
+        goalId: goalId || metadata?.goal_id || undefined,
+        exerciseType: exerciseType || metadata?.adaptive_exercise_type || undefined,
+        constructionIds: constructionIds || undefined,
+        qualityStatus: qualityStatus || 'draft',
+        qualityReviewResult: qualityReviewResult || undefined,
       },
     })
 

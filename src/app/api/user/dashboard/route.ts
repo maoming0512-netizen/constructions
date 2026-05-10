@@ -13,14 +13,14 @@ export async function GET(req: NextRequest) {
     const now = new Date()
     const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000)
 
-    const [practiceStats, rssCount, recentRecords, weeklyStats] = await Promise.all([
+    const [practiceStats, articleCount, recentRecords, weeklyStats] = await Promise.all([
       prisma.practiceRecord.aggregate({
         where: { userId },
         _count: true,
         _sum: { wordCount: true },
         _avg: { wordCount: true },
       }),
-      prisma.rSSAnalysis.count({ where: { userId } }),
+      prisma.generatedConstructionArticle.count({ where: { ownerUserId: userId } }),
       prisma.practiceRecord.findMany({
         where: { userId },
         orderBy: { createdAt: 'desc' },
@@ -47,7 +47,7 @@ export async function GET(req: NextRequest) {
         avgWordsPerExercise: Math.round(practiceStats._avg.wordCount || 0),
         exercisesThisWeek: weeklyStats._count,
         wordsThisWeek: weeklyStats._sum.wordCount || 0,
-        rssAnalyses: rssCount,
+        rssAnalyses: articleCount,
       },
       recentRecords,
     })

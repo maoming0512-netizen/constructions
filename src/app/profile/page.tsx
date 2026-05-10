@@ -42,7 +42,7 @@ export default function ProfilePage() {
     } else if (!authLoading) {
       const saved = localStorage.getItem('cs_practice_records')
       const records = saved ? JSON.parse(saved) : []
-      const rssSaved = localStorage.getItem('cs_rss_analyses')
+      const rssSaved = localStorage.getItem('cs_construction_articles')
       const rssRecords = rssSaved ? JSON.parse(rssSaved) : []
       const totalWords = records.reduce((s: number, r: any) => s + (r.wordCount || 0), 0)
       setProfileStats({

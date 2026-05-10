@@ -26,22 +26,7 @@ const PRESETS = {
   deepseek: {
     name: 'DeepSeek',
     baseURL: 'https://api.deepseek.com',
-    model: 'deepseek-v4-pro',
-  },
-  siliconflow: {
-    name: 'SiliconFlow',
-    baseURL: 'https://api.siliconflow.cn',
-    model: 'deepseek-ai/DeepSeek-V4-Flash',
-  },
-  kimi: {
-    name: 'Kimi (Moonshot)',
-    baseURL: 'https://api.moonshot.cn/v1',
-    model: 'kimi-k2.6',
-  },
-  openai: {
-    name: 'OpenAI',
-    baseURL: 'https://api.openai.com/v1',
-    model: 'gpt-4',
+    model: 'deepseek-chat',
   },
 }
 
@@ -294,7 +279,7 @@ export default function SettingsPage() {
                     setModel(e.target.value)
                     setSaved(false)
                   }}
-                  placeholder="gpt-4 / deepseek-v4-pro"
+                  placeholder="deepseek-chat"
                   className="mt-1.5"
                 />
               </div>

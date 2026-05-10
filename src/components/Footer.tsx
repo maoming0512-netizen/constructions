@@ -3,7 +3,7 @@ import { Leaf, Github, Twitter, Mail } from 'lucide-react'
 
 const learnLinks = [
   { label: 'Practice', href: '/practice' },
-  { label: 'Library', href: '/constructions' },
+  { label: 'Studio', href: '/constructions' },
   { label: 'History', href: '/history' },
   { label: 'AI Lab', href: '/ai-lab' },
 ]

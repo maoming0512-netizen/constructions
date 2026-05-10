@@ -43,13 +43,26 @@ export async function GET(req: NextRequest) {
     const url = new URL(req.url)
     const limit = parseInt(url.searchParams.get('limit') || '20')
 
-    const records = await prisma.rSSAnalysis.findMany({
-      where: { userId: session.user.id },
+    const articles = await prisma.generatedConstructionArticle.findMany({
+      where: { ownerUserId: session.user.id },
       orderBy: { createdAt: 'desc' },
       take: limit,
     })
 
-    return NextResponse.json({ records })
+    return NextResponse.json({
+      records: articles.map((article) => ({
+        id: article.id,
+        feedSource: 'construction-studio',
+        articleTitle: article.title,
+        articleLink: '',
+        analysis: JSON.stringify({
+          summary: article.articleContent.slice(0, 240),
+          constructions: article.highlightedConstructionData,
+          writingTakeaway: Array.isArray(article.teachingNotes) ? article.teachingNotes[0] : '',
+        }),
+        createdAt: article.createdAt,
+      })),
+    })
   } catch (error: any) {
     console.error('Get RSS analysis error:', error)
     return NextResponse.json({ error: 'Failed to fetch' }, { status: 500 })
